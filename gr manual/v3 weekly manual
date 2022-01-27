@@ -1,0 +1,298 @@
+============================================================================================================                                          Weekly All
+============================================================================================================
+
+-- ALL Merchant
+SELECT   Sum(Total), 
+         "Status"
+FROM     (
+Select a.status AS "Status", count (a.status) AS Total
+From receive_wlt a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_obp a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_otp a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' 
+GROUP BY "Status"
+ UNION ALL
+
+Select a.status AS "Status", count (a.status) AS Total
+From receive_cc a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_cc_installment a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_installment a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_installment_payment a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_obp_pay_reference_link a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_obt a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_pay_reference_link a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_settlement_info	 a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' 
+GROUP BY "Status"
+
+) AS c
+GROUP BY "Status"
+ORDER BY "Status" ASC
+
+
+============================================================================================================                                         Weekly without PAYBIZ
+============================================================================================================
+
+-- ALL Merchant except PAYBIZ - 00000027011198B17BFB
+SELECT   Sum(Total), 
+         "Status"
+FROM     (
+Select a.status AS "Status", count (a.status) AS Total
+From receive_wlt a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id != '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_obp a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id != '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_otp a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id != '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+
+Select a.status AS "Status", count (a.status) AS Total
+From receive_cc a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id != '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_cc_installment a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id != '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_installment a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id != '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_installment_payment a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id != '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_obp_pay_reference_link a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id != '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_obt a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id != '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_pay_reference_link a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id != '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_settlement_info	 a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id != '00000027011198B17BFB' 
+GROUP BY "Status"
+
+) AS c
+GROUP BY "Status"
+ORDER BY "Status" ASC
+
+============================================================================================================                                         Weekly PAYBIZ Only
+============================================================================================================
+
+-- PAYBIZ Only- 00000027011198B17BFB
+
+SELECT   Sum(Total), 
+         "Status"
+FROM     (
+Select a.status AS "Status", count (a.status) AS Total
+From receive_wlt a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id = '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_obp a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id = '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_otp a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id = '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+
+Select a.status AS "Status", count (a.status) AS Total
+From receive_cc a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id = '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_cc_installment a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id = '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_installment a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id = '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_installment_payment a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id = '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_obp_pay_reference_link a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id = '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_obt a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id = '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_pay_reference_link a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id = '00000027011198B17BFB' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_settlement_info	 a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('GR001', 'GR002', 'GR003', 'GR018', 'GR033', 'GR043', 'GR052', 'GR152', 'FR030', 'RM033',  'RM041', 'FR017', 'GR013', 'GR092',  'GR049', 'GR124', 'GR069', 'FR013', 'GR036', 'GR055') AND a.created_at  between '2022-01-03 00:00:00' and '2022-01-09 23:59:59' and a.merchant_id = '00000027011198B17BFB' 
+GROUP BY "Status"
+
+) AS c
+GROUP BY "Status"
+ORDER BY "Status" ASC
+
+============================================================================================================                                         Weekly Tonik Only
+============================================================================================================
+
+-- TONIK DIGITAL BANK_RPF_GPAP_PHP - 000000300920DE313239
+-- TONIK DIGITAL BANK_WORKFLOW_MIGS_PHP - 000000300920D374EDC0
+
+SELECT   Sum(Total), 
+         "Status"
+FROM     (
+Select a.status AS "Status", count (a.status) AS Total
+From receive_wlt a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('FR017',	'GR001',	'GR002',	'GR003',	'GR005',	'GR021',	'GR033',	'GR043',	'GR049',	'GR053',	'GR092',	'GR094',	'GR152',	'RM042') AND a.created_at  between '2021-12-27 00:00:00' and '2022-01-02 23:59:59' and a.merchant_id = '000000300920DE313239' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_obp a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('FR017',	'GR001',	'GR002',	'GR003',	'GR005',	'GR021',	'GR033',	'GR043',	'GR049',	'GR053',	'GR092',	'GR094',	'GR152',	'RM042') AND a.created_at  between '2021-12-27 00:00:00' and '2022-01-02 23:59:59' and a.merchant_id = '000000300920DE313239' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_otp a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('FR017',	'GR001',	'GR002',	'GR003',	'GR005',	'GR021',	'GR033',	'GR043',	'GR049',	'GR053',	'GR092',	'GR094',	'GR152',	'RM042') AND a.created_at  between '2021-12-27 00:00:00' and '2022-01-02 23:59:59' and a.merchant_id = '000000300920DE313239' 
+GROUP BY "Status"
+ UNION ALL
+
+Select a.status AS "Status", count (a.status) AS Total
+From receive_cc a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('FR017',	'GR001',	'GR002',	'GR003',	'GR005',	'GR021',	'GR033',	'GR043',	'GR049',	'GR053',	'GR092',	'GR094',	'GR152',	'RM042') AND a.created_at  between '2021-12-27 00:00:00' and '2022-01-02 23:59:59' and a.merchant_id = '000000300920DE313239' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_cc_installment a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('FR017',	'GR001',	'GR002',	'GR003',	'GR005',	'GR021',	'GR033',	'GR043',	'GR049',	'GR053',	'GR092',	'GR094',	'GR152',	'RM042') AND a.created_at  between '2021-12-27 00:00:00' and '2022-01-02 23:59:59' and a.merchant_id = '000000300920DE313239' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_installment a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('FR017',	'GR001',	'GR002',	'GR003',	'GR005',	'GR021',	'GR033',	'GR043',	'GR049',	'GR053',	'GR092',	'GR094',	'GR152',	'RM042') AND a.created_at  between '2021-12-27 00:00:00' and '2022-01-02 23:59:59' and a.merchant_id = '000000300920DE313239' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_installment_payment a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('FR017',	'GR001',	'GR002',	'GR003',	'GR005',	'GR021',	'GR033',	'GR043',	'GR049',	'GR053',	'GR092',	'GR094',	'GR152',	'RM042') AND a.created_at  between '2021-12-27 00:00:00' and '2022-01-02 23:59:59' and a.merchant_id = '000000300920DE313239' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_obp_pay_reference_link a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('FR017',	'GR001',	'GR002',	'GR003',	'GR005',	'GR021',	'GR033',	'GR043',	'GR049',	'GR053',	'GR092',	'GR094',	'GR152',	'RM042') AND a.created_at  between '2021-12-27 00:00:00' and '2022-01-02 23:59:59' and a.merchant_id = '000000300920DE313239' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_obt a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('FR017',	'GR001',	'GR002',	'GR003',	'GR005',	'GR021',	'GR033',	'GR043',	'GR049',	'GR053',	'GR092',	'GR094',	'GR152',	'RM042') AND a.created_at  between '2021-12-27 00:00:00' and '2022-01-02 23:59:59' and a.merchant_id = '000000300920DE313239' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_pay_reference_link a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('FR017',	'GR001',	'GR002',	'GR003',	'GR005',	'GR021',	'GR033',	'GR043',	'GR049',	'GR053',	'GR092',	'GR094',	'GR152',	'RM042') AND a.created_at  between '2021-12-27 00:00:00' and '2022-01-02 23:59:59' and a.merchant_id = '000000300920DE313239' 
+GROUP BY "Status"
+ UNION ALL
+Select a.status AS "Status", count (a.status) AS Total
+From receive_settlement_info	 a inner join merchant b on a.merchant_id = b.merchant_id 
+where a.status in ('FR017',	'GR001',	'GR002',	'GR003',	'GR005',	'GR021',	'GR033',	'GR043',	'GR049',	'GR053',	'GR092',	'GR094',	'GR152',	'RM042') AND a.created_at  between '2021-12-27 00:00:00' and '2022-01-02 23:59:59' and a.merchant_id = '000000300920DE313239' 
+GROUP BY "Status"
+
+) AS c
+GROUP BY "Status"
+ORDER BY "Status" ASC
+
+
+
+
+
+-- receive --	
+receive_cc	
+receive_cc_installment	
+receive_installment	
+receive_installment_payment	
+receive_obp	
+receive_obp_pay_reference_link	
+receive_obt	
+receive_otp	
+receive_pay_reference_link	
+receive_settlement_info	
+receive_wlt	
+
+-- response --
+response_cc
+response_cc_installment
+response_installment
+response_installment_payment
+receive_obp	
+response_obt
+response_otp
+response_wlt

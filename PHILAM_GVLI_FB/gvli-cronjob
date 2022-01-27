@@ -1,0 +1,15 @@
+#############################################
+#         V1 & V3 GVLI Daily Report         #
+#############################################
+
+# V1 MYSQL
+
+0 * * * * /home/ubuntu/scripts/v1-gvli.sh
+5 * * * * /home/ubuntu/scripts/v1-gvli-mail.sh
+#0 * * * * /home/ubuntu/scripts/v1-gvli-dev.sh
+#5 * * * * /home/ubuntu/scripts/v1-gvli-dev-mail.sh
+
+# V3 POSGRESQL
+
+0 * * * * /home/ubuntu/scripts/v3-gvli.sh
+5 * * * * /home/ubuntu/scripts/v3-gvli-mail.sh

@@ -1,0 +1,96 @@
+
+#############################################
+#               V1 Daily Report             #
+#############################################
+
+# V1 MYSQL
+0 * * * * /home/ubuntu/scripts/gr-v1.sh
+5 * * * * /home/ubuntu/scripts/sendmail-v1.sh
+0 * * * * /home/ubuntu/scripts/logs-rep.sh
+5 * * * * /home/ubuntu/scripts/send-logsdb.sh
+0 * * * * /home/ubuntu/scripts/prulife-gr.sh
+5 * * * * /home/ubuntu/scripts/prulife-mail.sh
+0 21 * * * /home/ubuntu/scripts/rebill-gr.sh
+10 21 * * * /home/ubuntu/scripts/rebill-mail.sh
+
+#############################################
+#                Special Event              #
+#############################################
+
+# V1
+#0 * * * * /home/ubuntu/scripts/gmovies-v1.sh
+#5 * * * * /home/ubuntu/scripts/gmovies-mail.sh
+
+#############################################
+#                Weekly Report              #
+#############################################
+
+# V1
+0 0 * * MON /home/ubuntu/scripts/weekly-v1.sh
+10 0 * * MON /home/ubuntu/scripts/weekly-v1-mail.sh
+
+#############################################
+#               Monthly  Report             #
+#############################################
+
+# V1
+0 0 1 * * /home/ubuntu/scripts/monthly-v1.sh
+10 0 1 * * /home/ubuntu/scripts/monthly-sendmail-v1.sh
+
+#############################################
+#               V3 Daily Report             #
+#############################################
+
+# V3 POSGRESQL
+0 * * * * /home/ubuntu/scripts/gr-v3.sh
+5 * * * * /home/ubuntu/scripts/sendmail-v3.sh
+
+# V3 Monthly Report
+0 0 1 * * /home/ubuntu/scripts/monthly-v3.sh
+10 0 1 * * /home/ubuntu/scripts/monthly-sendmail-v3.sh
+
+
+#############################################
+#               Telegram Notif              #
+#############################################
+
+0 * * * * /home/ubuntu/scripts/gr-v1-GRError.sh 
+#5 * * * * /home/ubuntu/scripts/sendmail-gr033.sh
+5 * * * * /home/ubuntu/scripts/sendmail-telegram.sh
+0 * * * * /home/ubuntu/scripts/gr-v3-GRError.sh
+5 * * * * /home/ubuntu/scripts/sendmail-v3-telegram.sh
+
+
+#############################################
+#          Sales and Finance Dept           #
+#############################################
+
+###########  Weekly Report ###########
+
+# V1
+0 0 * * MON /home/ubuntu/scripts/sales-v1-weekly.sh
+10 0 * * MON /home/ubuntu/scripts/sales-v1-weekly-mail.sh
+
+# V3
+0 0 * * MON /home/ubuntu/scripts/sales-v3-weekly.sh
+10 0 * * MON /home/ubuntu/scripts/sales-v3-weekly-mail.sh
+
+# Paybiz
+0 0 * * MON /home/ubuntu/scripts/paybiz-v3-weekly.sh
+10 0 * * MON /home/ubuntu/scripts/paybiz-v3-weekly-mail.sh
+
+
+########### Monthly Report ###########
+
+# V1
+0 0 1 * * /home/ubuntu/scripts/sales-v1-monthly.sh
+10 0 1 * * /home/ubuntu/scripts/sales-v1-monthly-mail.sh
+
+# V3
+0 0 1 * * /home/ubuntu/scripts/sales-v3-monthly.sh
+10 0 1 * * /home/ubuntu/scripts/sales-v3-monthly-mail.sh
+
+# Paybiz
+0 0 1 * * /home/ubuntu/scripts/paybiz-v3-monthly-mail.sh
+10 0 1 * * /home/ubuntu/scripts/paybiz-v3-monthly-mail.sh
+

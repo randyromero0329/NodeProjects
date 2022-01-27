@@ -1,0 +1,33 @@
+
+######################################
+#            Daily Report            #
+######################################
+
+#DGATE
+0 * * * * /home/ubuntu/scripts/gr-dgate.sh
+5 * * * * /home/ubuntu/scripts/sendmail-dgate.sh
+
+######################################
+#           Telegram Notif           #
+######################################
+
+# DGATE
+0 * * * * /home/ubuntu/scripts/dgate-telegram.sh 
+5 * * * * /home/ubuntu/scripts/dgate-telegram-mail.sh
+
+######################################
+#            Weekly Report           #
+######################################
+
+# DGATE
+0 0 * * MON /home/ubuntu/scripts/sales-dgate-weekly.sh
+10 0 * * MON /home/ubuntu/scripts/sales-dgate-weekly-mail.sh
+
+######################################
+#           Monthly Report           #
+######################################
+
+# DGATE
+0 0 1 * * /home/ubuntu/scripts/sales-dgate-monthly.sh
+10 0 1 * * /home/ubuntu/scripts/sales-dgate-monthly-mail.sh
+

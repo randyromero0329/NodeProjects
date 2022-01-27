@@ -1,0 +1,6 @@
+-- DGate monthly
+SELECT dresResponseCode as "GR-CODE", COUNT(dresResponseCode) as COUNT  
+FROM [DGate2.0].[dbo].[details_response] 
+where dresResponseCode IN ('GR001','GR027','GR040','RM005') and drestimestamp BETWEEN '2021-12-01 00:00:00' and '2021-12-31 23:59:59' 
+GROUP BY dresResponseCode 
+ORDER BY dresResponseCode ASC;

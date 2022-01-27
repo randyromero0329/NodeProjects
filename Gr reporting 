@@ -1,0 +1,26 @@
+GR003 - Transaction Failed   SOS CHILDREN MOTO_MIGS_PHP                                
+GR003 - Transaction Failed   TONIK DIGITAL BANK_RPF_GPAP_PHP                           
+GR003 - Transaction Failed   CONVERGE ICT SOLUTIONS_GPAP_PHP                       
+GR011 - Request_id already processed| 2GO GROUP, INC_MIGS_PHP                                  
+GR021 - 3D Secure Enrollment Failed|  CONVERGE ICT SOLUTIONS_GPAP_PHP               
+GR021 - 3D Secure Enrollment Failed|  TONIK DIGITAL BANK_DV_GPAP_PHP                     
+GR021 - 3D Secure Enrollment Failed|  HC Consumer Finance PH_GPAP_PHP                      
+GR024 - Subscription Billing Successful                                PHILAM_IPOS MOTO_MIGS_PHP                               
+GR024 - Subscription Billing Successful                                Philamlife_Bplac MOTO_MIGS_PHP                            
+GR039 - Transaction Failed due to Insufficient funds                   SOS CHILDREN MOTO_MIGS_PHP                     
+GR043 - Acquiring Processor related error                              STARBUCKS_GPAP_PHP|      
+GR043 - Acquiring Processor related error                              HC Consumer Finance PH_GPAP_PHP                     
+GR049 - Card Issuer Declined Home Credit Phil_TKNMOTO_GPAP_PHP                       
+GR049 - Card Issuer Declined SOS CHILDREN MOTO_MIGS_PHP                                
+GR051 - Allowable Authorization period elapsed                         NATIONAL UNIVERSITY INC._MIGS_PHP            
+GR152 - Transaction Expired  ConvergeICT_Batman_GPAP_PHP                               
+GR152 - Transaction Expired  TICKET2ME_MAYBANK_PHP|   
+GR152 - Transaction Expired  LTO_Maybank_PHP|         
+GR152 - Transaction Expired  NU MOA, Inc._MIGS_PHP|   
+GR152 - Transaction Expired  TONIK DIGITAL BANK_RPF_GPAP_PHP                         
+GR152 - Transaction Expired  NATIONAL UNIVERSITY INC._MIGS_PHP                       
+GR180 - Subscription Billing Cancellation Success.                     PHILAM_VIRTUAL IPOS_MOTO_MIGS                
+GR180 - Subscription Billing Cancellation Success.                     PHILAM_VIRTUAL BPLAC_MOTO_MIGS             
+RM002 - BIN restricted       TONIK DIGITAL BANK_DV_GPAP_PHP                            
+RM020 - Decline due to exceeded account use.                           CONVERGE ICT SOLUTIONS_GPAP_PHP         
+RM020 - Decline due to exceeded account use.                           ConvergeICT_Batman_GPAP_PHP                              

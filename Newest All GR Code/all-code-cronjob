@@ -1,0 +1,20 @@
+#############################################
+#                 V1 All Code               #
+#############################################
+
+# V1 MYSQL
+# Daily Report
+0 * * * * /home/ubuntu/scripts/v1-all-code.sh
+5 * * * * /home/ubuntu/scripts/sendmail-v1-all-code.sh
+0 * * * * /home/ubuntu/scripts/v1.2-all-code.sh
+5 * * * * /home/ubuntu/scripts/sendmail-v1.2-all-code.sh
+
+
+#############################################
+#                 V3 All Code               #
+#############################################
+
+# V3 POSGRESQL
+# Daily Report
+0 * * * * /home/ubuntu/scripts/v3-all-code.sh
+5 * * * * /home/ubuntu/scripts/sendmail-v3-all-code.sh
