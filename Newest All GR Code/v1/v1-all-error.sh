@@ -13,7 +13,7 @@ WHERE  responsecode not in ('GR001','GR002','GR033','GR052','GR124','RM033','FR0
 GROUP  BY responsecode, mid_name,responsemess
 HAVING Count (responsecode) >= 5
 ORDER  BY responsecode 
-
+ 
 GO
 
 EOF

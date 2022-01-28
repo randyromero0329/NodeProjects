@@ -22,7 +22,7 @@ where a.status not in ('GR001','GR002','GR033','GR052','GR124','RM033','FR032') 
 GROUP BY "Name", "Status"
  UNION ALL
 Select b.name AS "Name", a.status AS "Status", count (a.status) AS Total
-From receive_otp a inner join merchant b on a.merchant_id = b.merchant_id 
+From receive_otp a inner join merchant b on a.merchant_id = b.merchant_id  
 where a.status not in ('GR001','GR002','GR033','GR052','GR124','RM033','FR032') AND a.created_at BETWEEN (Now() - interval '1 HOUR') AND now() 
 GROUP BY "Name", "Status"
  UNION ALL

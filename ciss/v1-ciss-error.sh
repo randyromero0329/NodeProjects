@@ -4,7 +4,7 @@
 filename=$(date +"%m-%d-%Y-%H:%M")
 
 #TransDB mySQL
-sqlcmd -S 10.0.8.34,5598 -U sa  -P ReportSa1108 -d REPV2 << EOF > /home/ubuntu/v1-ciss-error/GR_REPORT-GR033${filename}.txt
+sqlcmd -S 10.0.8.34,5598 -U sa  -P ReportSa1108 -d REPV2 << EOF > /home/ubuntu/ciss/v1-ciss-error/GR_REPORT-GR033${filename}.txt
 
 SELECT LEFT(CONCAT('*',responsecode,' - ',responsemess,'*', '\n ' , mid_name, ' \n  ----- *Total* ',Count (*),' -----'),130) AS "Note: That the following result met the threshold of >= 5 transactions per Hour."
 FROM   rep
